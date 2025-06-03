@@ -9,6 +9,8 @@ import figmaIcon from '/src/assets/figma.svg';
 import javascriptIcon from '/src/assets/javascript.svg';
 import gitIcon from '/src/assets/git.svg';
 import { useState, useEffect } from 'react';
+import camaraImg from '/src/assets/camara.jpg';
+import chatImg from '/src/assets/chat.svg';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
@@ -26,7 +28,6 @@ function App() {
       <nav className="w-full bg-white shadow-md py-4 px-6 flex flex-wrap items-center justify-between text-pink-700 font-medium">
         <div className="flex items-center justify-between w-full md:w-auto">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
-          {/* Burger menu button for mobile */}
           <button
             className="md:hidden text-pink-700 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -38,7 +39,6 @@ function App() {
           </button>
         </div>
 
-        {/* Navigation links */}
         <div className={`md:flex md:items-center md:gap-6 md:w-auto ${isMenuOpen ? "flex flex-col items-center justify-center text-center w-full mt-4 gap-4" : "hidden"}`}>
           <a
             href="#about"
@@ -56,7 +56,7 @@ function App() {
             href="#skills"
             className="block md:inline text-lg px-4 py-2 transition text-[#E076A9] hover:bg-[#FAD6E7] rounded"
           >
-            Technologies
+            Skills
           </a>
           <a
             href="#contact"
@@ -66,7 +66,7 @@ function App() {
           </a>
         </div>
       </nav>
-      <section id="home" className="h-screen bg-pink-100 flex flex-col items-center justify-center text-center px-4">
+      <section id="home" className="h-screen bg-[url('/src/assets/fondo.svg')] bg-cover bg-center flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-5xl md:text-7xl font-bold text-pink-900 font-['DynaPuff']">
           Hey, I'm Adriana Palacios
         </h1>
@@ -104,12 +104,12 @@ function App() {
         </div>
       </section>
 
-      <section id="skills" className="min-h-screen bg-[url('/src/assets/fondo.svg')] bg-cover bg-center px-6 md:px-20 py-32 text-center">
+      <section id="skills" className="min-h-screen bg-pink-100 px-6 md:px-20 py-32 text-center">
         <h2 className="text-4xl md:text-5xl font-semibold text-pink-800 mb-6 mt-4 font-['DynaPuff']">
           My Frontend Skills
         </h2>
         <p className="text-pink-700 text-base md:text-lg max-w-xl mx-auto mb-10">
-          These are the tools and technologies I use to create responsive, accessible, and beautiful user interfaces.
+          These are the tools and skills I use to create responsive, accessible, and beautiful user interfaces.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 justify-items-center">
           {[
@@ -131,6 +131,47 @@ function App() {
               {tech.name}
             </span>
           ))}
+        </div>
+      </section>
+
+      <section id="projects" className="min-h-screen bg-pink-100 px-6 md:px-20 py-24 text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold text-pink-800 mb-6 font-['DynaPuff']">
+          My Projects
+        </h2>
+        <p className="text-pink-700 text-base md:text-lg max-w-xl mx-auto mb-10">
+          These are some of the projects I've worked on.
+        </p>
+        <div className="grid md:grid-cols-3 gap-10">
+          <a
+            href="https://github.com/adrianap0607/labcss"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-[#FEC6C1] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#FEC6C1] w-full max-w-xs mx-auto"
+          >
+            <img src={camaraImg} alt="Camara Polaroid CSS" className="w-full aspect-square object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1">Cámara Polaroid</h3>
+              <p className="text-white text-xs mb-2 line-clamp-2">
+                A responsive camera made only with CSS.
+              </p>
+              <span className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full mt-2 w-fit bg-[rgba(254,198,193,0.75)]">CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/adrianap0607/labjs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-[#E7C0E9] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#E7C0E9] w-full max-w-xs mx-auto"
+          >
+            <img src={chatImg} alt="Chat JS Project" className="w-full aspect-square object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1">Chat</h3>
+              <p className="text-white text-xs mb-2 line-clamp-2">
+                A simple chat built entirely with JavaScript.
+              </p>
+              <span className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full mt-2 w-fit bg-[rgba(231,192,233,0.75)]">JavaScript</span>
+            </div>
+          </a>
         </div>
       </section>
     </main>
