@@ -367,7 +367,7 @@ function App() {
               />
             </a>
           </div>
-          <p className="text-sm text-pink-700 text-center mt-6">© {new Date().getFullYear()} Adriana Palacios. Todos los derechos reservados.</p>
+          <p className="text-sm text-pink-700 text-center mt-6">© {new Date().getFullYear()} Adriana Palacios. All rights reserved.</p>
         </footer>
       </div>
     </main>
