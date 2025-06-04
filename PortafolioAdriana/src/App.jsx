@@ -14,6 +14,7 @@ import chatImg from '/src/assets/chat.svg';
 import memory from "/src/assets/memoria.svg";
 import calculadora from "/src/assets/calculadora.svg";
 import inventario from "/src/assets/inventario.svg";
+import foto from "/src/assets/foto.jpg";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
@@ -123,7 +124,7 @@ function App() {
             <div className="relative transform rotate-[-3deg]">
               <div className="absolute bottom-0 right-0 w-64 md:w-80 h-80 bg-[#E7C0E9] translate-x-4 translate-y-4 rounded z-[-10]" />
               <div className="w-64 md:w-80 h-80 bg-white border-4 border-white rounded shadow-lg overflow-hidden ">
-                <img src="/src/assets/foto.jpg" alt="Adriana Palacios" className="w-full h-full object-cover object-top" />
+                <img src={foto} alt="Adriana Palacios" className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
