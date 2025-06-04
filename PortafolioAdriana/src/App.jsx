@@ -28,9 +28,6 @@ function App() {
   }, []);
   return (
     <main className="relative font-sans bg-[#FFC8DD] min-h-screen">
-      <a href="https://github.com/adrianap0607" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 z-50 hover:opacity-80 transition">
-        <img src={githubIcon} alt="GitHub" className="w-6 h-6" />
-      </a>
       <nav className="w-full bg-white shadow-md py-4 px-6 flex flex-wrap items-center justify-between text-pink-700 font-medium">
         <div className="flex items-center justify-between w-full md:w-auto">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
@@ -65,7 +62,7 @@ function App() {
             Skills
           </a>
           <a
-            href="#contact"
+            href="#footer"
             className="block md:inline text-lg px-4 py-2 transition text-[#E7C0E9] hover:bg-[#F7E4F5] rounded"
           >
             Contact
@@ -87,9 +84,9 @@ function App() {
       <section id="about" className="min-h-screen bg-[#ffecef] px-6 md:px-20 py-24 flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="md:w-1/2 flex justify-center">
           <div className="relative transform rotate-[-3deg]">
-            <div className="absolute bottom-0 right-0 w-64 md:w-80 h-80 bg-[#E7C0E9] translate-x-4 translate-y-4 rounded z-0" />
-            <div className="w-64 md:w-80 h-80 bg-white border-4 border-white rounded shadow-lg flex items-center justify-center text-pink-300 text-xl italic z-10">
-              Imagen
+            <div className="absolute bottom-0 right-0 w-64 md:w-80 h-80 bg-[#E7C0E9] translate-x-4 translate-y-4 rounded z-[-10]" />
+            <div className="w-64 md:w-80 h-80 bg-white border-4 border-white rounded shadow-lg overflow-hidden ">
+              <img src="/src/assets/foto.jpg" alt="Adriana Palacios" className="w-full h-full object-cover object-top" />
             </div>
           </div>
         </div>
@@ -104,9 +101,9 @@ function App() {
             so every interaction is clear, accessible, and enjoyable.
             Design, to me, is a way to communicate and connect with people effectively.
           </p>
-          <button className="bg-[#A0E0D8] text-pink-900 font-semibold py-2 px-5 rounded-full hover:bg-[#76c7ba] transition shadow">
+          <a href="#footer" className="bg-[#A0E0D8] text-pink-900 font-semibold py-2 px-5 rounded-full hover:bg-[#76c7ba] transition shadow inline-block">
             Contact Me →
-          </button>
+          </a>
         </div>
       </section>
 
@@ -211,7 +208,7 @@ function App() {
             </div>
           </a>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-2 md:mt-4">
+        <div className="flex flex-wrap justify-center items-center gap-1 md:gap-2 mt-2 md:mt-4">
           <a
             href="https://github.com/adrianap0607/Proyecto1"
             target="_blank"
@@ -277,35 +274,32 @@ function App() {
           </a>
         </div>
       </section>
-      <footer className="bg-[#ffecef] text-pink-700 px-6 md:px-20 py-12 font-medium">
+      <footer id="footer" className="bg-[#ffecef] text-pink-700 px-6 md:px-20 py-12 font-medium">
         <div className="flex justify-between items-center flex-wrap gap-4">
           <div className="text-left">
-            <h3 className="text-xl md:text-2xl font-semibold mb-1 font-['DynaPuff'] text-pink-800">Let’s Connect!</h3>
-            <p className="mb-2 text-base text-pink-700">
+            <h3 className="text-lg md:text-xl font-semibold mb-1 font-['DynaPuff'] text-pink-700">Let’s Connect!</h3>
+            <p className="mb-2 text-sm text-pink-700">
               Would you like to work with me or have a project in mind?<br />
-              I’m ready to hear from you! 💬
+              I’m ready to hear from you! 
             </p>
-            <p className="text-lg text-pink-800">adrianaP2670@gmail.com</p>
-            <p className="text-lg text-pink-800">+502 4642-8883</p>
+            <p className="text-base text-pink-700">adrianaP2670@gmail.com</p>
+            <p className="text-base text-pink-700">+502 4642-8883</p>
           </div>
           <a
             href="https://github.com/adrianap0607"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80 transition"
+            className="hover:opacity-80 transition text-pink-700"
           >
             <img
               src={githubIcon}
               alt="GitHub"
-              className="w-6 h-6"
-              style={{
-                filter:
-                  'invert(24%) sepia(85%) saturate(4417%) hue-rotate(312deg) brightness(92%) contrast(88%)'
-              }}
+              className="w-10 h-10 text-pink-700"
+              style={{ filter: "invert(41%) sepia(16%) saturate(1564%) hue-rotate(294deg) brightness(92%) contrast(92%)" }}
             />
           </a>
         </div>
-        <p className="text-sm text-pink-500 text-center mt-6">© {new Date().getFullYear()} Adriana Palacios. Todos los derechos reservados.</p>
+        <p className="text-sm text-pink-700 text-center mt-6">© {new Date().getFullYear()} Adriana Palacios. Todos los derechos reservados.</p>
       </footer>
     </main>
   );
