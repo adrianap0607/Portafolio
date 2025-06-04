@@ -14,7 +14,8 @@ import chatImg from '/src/assets/chat.svg';
 import memory from "/src/assets/memoria.svg";
 import calculadora from "/src/assets/calculadora.svg";
 import inventario from "/src/assets/inventario.svg";
-import foto from "/src/assets/foto.jpg";
+import foto from "./assets/foto.jpg";
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
