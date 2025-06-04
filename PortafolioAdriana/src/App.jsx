@@ -11,6 +11,9 @@ import gitIcon from '/src/assets/git.svg';
 import { useState, useEffect } from 'react';
 import camaraImg from '/src/assets/camara.jpg';
 import chatImg from '/src/assets/chat.svg';
+import memory from "/src/assets/memoria.svg";
+import calculadora from "/src/assets/calculadora.svg";
+import inventario from "/src/assets/inventario.svg";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
@@ -24,7 +27,10 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <main className="font-sans bg-[#FFC8DD] min-h-screen">
+    <main className="relative font-sans bg-[#FFC8DD] min-h-screen">
+      <a href="https://github.com/adrianap0607" target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 z-50 hover:opacity-80 transition">
+        <img src={githubIcon} alt="GitHub" className="w-6 h-6" />
+      </a>
       <nav className="w-full bg-white shadow-md py-4 px-6 flex flex-wrap items-center justify-between text-pink-700 font-medium">
         <div className="flex items-center justify-between w-full md:w-auto">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
@@ -78,7 +84,7 @@ function App() {
         </button>
       </section>
 
-      <section id="about" className="min-h-screen bg-pink-100 px-6 md:px-20 py-24 flex flex-col md:flex-row items-center justify-between gap-10">
+      <section id="about" className="min-h-screen bg-[#ffecef] px-6 md:px-20 py-24 flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="md:w-1/2 flex justify-center">
           <div className="relative transform rotate-[-3deg]">
             <div className="absolute bottom-0 right-0 w-64 md:w-80 h-80 bg-[#E7C0E9] translate-x-4 translate-y-4 rounded z-0" />
@@ -104,7 +110,7 @@ function App() {
         </div>
       </section>
 
-      <section id="skills" className="min-h-screen bg-pink-100 px-6 md:px-20 py-32 text-center">
+      <section id="skills" className="min-h-screen bg-[#ffe5ea] px-6 md:px-20 pt-44 pb-32 text-center">
         <h2 className="text-4xl md:text-5xl font-semibold text-pink-800 mb-6 mt-4 font-['DynaPuff']">
           My Frontend Skills
         </h2>
@@ -134,25 +140,25 @@ function App() {
         </div>
       </section>
 
-      <section id="projects" className="min-h-screen bg-pink-100 px-6 md:px-20 py-24 text-center">
+      <section id="projects" className="min-h-screen bg-[#ffdfE5] px-6 md:px-20 py-24 text-center">
         <h2 className="text-4xl md:text-5xl font-semibold text-pink-800 mb-6 font-['DynaPuff']">
           My Projects
         </h2>
         <p className="text-pink-700 text-base md:text-lg max-w-xl mx-auto mb-10">
           These are some of the projects I've worked on.
         </p>
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-6 justify-items-center">
           <a
             href="https://github.com/adrianap0607/labcss"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative bg-[#FEC6C1] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#FEC6C1] w-full max-w-xs mx-auto"
+            className="group relative bg-[#FEC6C1] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#f99db6] w-full max-w-sm mx-auto"
           >
             <img src={camaraImg} alt="Camara Polaroid CSS" className="w-full aspect-square object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
               <h3 className="text-lg md:text-xl font-bold text-white mb-1">Cámara Polaroid</h3>
               <p className="text-white text-xs mb-2 line-clamp-2">
-                A responsive camera made only with CSS.
+                A fully responsive Polaroid-style camera built using pure CSS.
               </p>
               <span className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full mt-2 w-fit bg-[rgba(254,198,193,0.75)]">CSS</span>
             </div>
@@ -161,19 +167,146 @@ function App() {
             href="https://github.com/adrianap0607/labjs"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative bg-[#E7C0E9] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#E7C0E9] w-full max-w-xs mx-auto"
+            className="group relative bg-[#E7C0E9] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#e084c8] w-full max-w-sm mx-auto"
           >
             <img src={chatImg} alt="Chat JS Project" className="w-full aspect-square object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
               <h3 className="text-lg md:text-xl font-bold text-white mb-1">Chat</h3>
               <p className="text-white text-xs mb-2 line-clamp-2">
-                A simple chat built entirely with JavaScript.
+                A real-time chat application using only JavaScript, featuring dynamic message display and input validation.
               </p>
               <span className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full mt-2 w-fit bg-[rgba(231,192,233,0.75)]">JavaScript</span>
             </div>
           </a>
+          <a
+            href="https://github.com/adrianap0607/labmemoria"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-[#ffc0cb] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#ff85a2] w-full max-w-sm mx-auto"
+          >
+            <img src={memory} alt="Memory Game" className="w-full aspect-square object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1">Memory Game</h3>
+              <p className="text-white text-xs mb-2 line-clamp-2">
+                An memory card game developed with React, featuring smooth animations and styled with modern design.
+              </p>
+              <div className="flex gap-2 flex-wrap mt-2">
+                {["React", "HTML", "CSS", "JavaScript"].map((tech, index) => (
+                  <span
+                    key={tech}
+                    className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full"
+                    style={{
+                      backgroundColor: [
+                        "rgba(228, 202, 75, 0.75)",
+                        "rgba(160, 224, 216, 0.75)",
+                        "rgba(224, 118, 169, 0.75)",
+                        "rgba(244, 159, 81, 0.75)"
+                      ][index]
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        </div>
+        <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-2 md:mt-4">
+          <a
+            href="https://github.com/adrianap0607/Proyecto1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-[#fbaac1] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#fb83a8] w-full max-w-sm mx-auto"
+          >
+            <img src={calculadora} alt="Calculadora" className="w-full aspect-square object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1">Calculadora</h3>
+              <p className="text-white text-xs mb-2 line-clamp-2">
+                A beautiful and creative web calculator with components, custom hooks, and built-in tests.
+              </p>
+              <div className="flex gap-2 flex-wrap mt-2">
+                {["React", "HTML", "CSS", "JavaScript"].map((tech, index) => (
+                  <span
+                    key={tech}
+                    className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full"
+                    style={{
+                      backgroundColor: [
+                        "rgba(228, 202, 75, 0.75)",
+                        "rgba(160, 224, 216, 0.75)",
+                        "rgba(224, 118, 169, 0.75)",
+                        "rgba(244, 159, 81, 0.75)"
+                      ][index]
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-[#d4b0ff] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#b088ff] w-full max-w-sm mx-auto"
+          >
+            <img src={inventario} alt="Inventory Report System" className="w-full aspect-square object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end items-start text-left">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1">Inventory Report System</h3>
+              <p className="text-white text-xs mb-2 line-clamp-2">
+                A data-driven system that integrates reports from PostgreSQL using Express.js and React to visualize inventory and client insights.
+              </p>
+              <div className="flex gap-2 flex-wrap mt-2">
+                {["React", "Express.js", "PostgreSQL"].map((tech, index) => (
+                  <span
+                    key={tech}
+                    className="inline-block text-white text-xs font-medium px-4 py-1 rounded-full"
+                    style={{
+                      backgroundColor: [
+                        "rgba(228, 202, 75, 0.75)",
+                        "rgba(160, 224, 216, 0.75)",
+                        "rgba(224, 118, 169, 0.75)"
+                      ][index]
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
         </div>
       </section>
+      <footer className="bg-[#ffecef] text-pink-700 px-6 md:px-20 py-12 font-medium">
+        <div className="flex justify-between items-center flex-wrap gap-4">
+          <div className="text-left">
+            <h3 className="text-xl md:text-2xl font-semibold mb-1 font-['DynaPuff'] text-pink-800">Let’s Connect!</h3>
+            <p className="mb-2 text-base text-pink-700">
+              Would you like to work with me or have a project in mind?<br />
+              I’m ready to hear from you! 💬
+            </p>
+            <p className="text-lg text-pink-800">adrianaP2670@gmail.com</p>
+            <p className="text-lg text-pink-800">+502 4642-8883</p>
+          </div>
+          <a
+            href="https://github.com/adrianap0607"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80 transition"
+          >
+            <img
+              src={githubIcon}
+              alt="GitHub"
+              className="w-6 h-6"
+              style={{
+                filter:
+                  'invert(24%) sepia(85%) saturate(4417%) hue-rotate(312deg) brightness(92%) contrast(88%)'
+              }}
+            />
+          </a>
+        </div>
+        <p className="text-sm text-pink-500 text-center mt-6">© {new Date().getFullYear()} Adriana Palacios. Todos los derechos reservados.</p>
+      </footer>
     </main>
   );
 }
