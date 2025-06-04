@@ -127,8 +127,15 @@ function App() {
           ].map((tech, index) => (
             <span
               key={index}
-              className="w-40 h-16 flex items-center justify-center gap-2 rounded-full text-lg font-medium text-white border-2 transition-all duration-300 hover:border-white/40 hover:scale-105 hover:shadow-lg"
-              style={{ backgroundColor: tech.color, borderColor: tech.color }}
+              className="w-40 h-16 flex items-center justify-center gap-2 rounded-full text-lg font-medium text-white border-2 transition-all duration-300 hover:brightness-110 hover:scale-105"
+              style={{
+                backgroundColor: tech.color,
+                borderColor: tech.color,
+                boxShadow: `0 0 0 transparent`,
+                transition: 'all 0.3s ease-in-out',
+              }}
+              onMouseEnter={e => e.currentTarget.style.boxShadow = `0 0 10px ${tech.color}`}
+              onMouseLeave={e => e.currentTarget.style.boxShadow = `0 0 0 transparent`}
             >
               <img src={tech.icon} alt={tech.name} className="w-6 h-6 invert brightness-0" />
               {tech.name}
@@ -242,7 +249,7 @@ function App() {
             </div>
           </a>
           <a
-            href="#"
+            href="https://github.com/Bamo0507/SistemaReportes"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative bg-[#d4b0ff] rounded-2xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-[0_4px_20px_#b088ff] w-full max-w-sm mx-auto"
