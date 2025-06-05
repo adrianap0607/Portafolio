@@ -107,9 +107,9 @@ function App() {
           <p className="mt-6 text-lg md:text-2xl text-pink-700 max-w-2xl">
             Frontend Developer focused on UI/UX and designing meaningful digital experiences.
           </p>
-          <button className="mt-10 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-md transition">
+          <a href="#projects" className="mt-10 inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-md transition">
             PROJECTS
-          </button>
+          </a>
         </section>
       </div>
 
